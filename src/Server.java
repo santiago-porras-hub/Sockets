@@ -6,9 +6,9 @@ import java.util.concurrent.Executors;
 public class Server {
 
     public static void main (String [] args) throws IOException {
-        try(ServerSocket listener = new ServerSocket(12332)){
+        try(ServerSocket listener = new ServerSocket(12333)){
 
-            System.out.println("Bienvenidos a Ciudadanos de cuatro patas");
+            System.out.println("Server Connected");
             ExecutorService pool = Executors.newFixedThreadPool(10);
 
             while(true){
