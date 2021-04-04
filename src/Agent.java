@@ -15,11 +15,11 @@ public class Agent {
             //quien se conectó
             System.out.println("Connected: " + socket);
             //mensaje que el usuario envia al servidor
-            System.out.println("Enter the message to be capitalized...");
 
             var scanner = new Scanner(System.in);
             var in = new Scanner(socket.getInputStream());
             var out = new PrintWriter(socket.getOutputStream(), true);
+            System.out.println(in.nextLine());
 
             // escucha un mensaje hasta que el usuario ingreese algo y oprima enter, se espera la entrada por teclado
 
@@ -27,8 +27,8 @@ public class Agent {
                 out.println(scanner.nextLine());
                 //mensaje transformado desde mi objeto scanner de mi socket
                 String message=in.nextLine();
-                if(message.length()>0&&!message.equals("CONFIRMAR")){
-                    System.out.println("Transformed message: " + message);
+                if(message.length()>0){
+                    System.out.println( message);
                 }else{
                 }
             }
