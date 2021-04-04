@@ -26,7 +26,7 @@ public class Server {
         try (var listener = new ServerSocket(59897)) {
             try (var listener2 = new ServerSocket(59898)) {
 
-                System.out.println("The capitalization server is running...");
+                System.out.println("The server is running...");
 
                 //máximo 20 hilos, 20 clientes.
                 //20 clientes conectados al mismo tiempo.
