@@ -4,7 +4,7 @@ public class Pet {
 
     private String Case =null;
     private String Especie =null;
-    private String TamaÃ±o = null;
+    private String Tamaño = null;
     private String Localidad =null;
     private String Direccion=null;
     private String Nombre =null;
@@ -19,83 +19,165 @@ public class Pet {
 
     }
 
-    public String getCase() {
-        return Case;
-    }
 
-    public void setCase(String aCase) {
-        Case = aCase;
-    }
+	/**
+	 * @return the case
+	 */
+	public String getCase() {
+		return Case;
+	}
 
-    public String getEspecie() {
-        return Especie;
-    }
 
-    public void setEspecie(String especie) {
-        Especie = especie;
-    }
+	/**
+	 * @param case1 the case to set
+	 */
+	public void setCase(String case1) {
+		Case = case1;
+	}
 
-    public String getTamaÃ±o() {
-        return TamaÃ±o;
-    }
 
-    public void setTamaÃ±o(String tamaÃ±o) {
-        TamaÃ±o = tamaÃ±o;
-    }
+	/**
+	 * @return the especie
+	 */
+	public String getEspecie() {
+		return Especie;
+	}
 
-    public String getLocalidad() {
-        return Localidad;
-    }
 
-    public void setLocalidad(String localidad) {
-        Localidad = localidad;
-    }
+	/**
+	 * @param especie the especie to set
+	 */
+	public void setEspecie(String especie) {
+		Especie = especie;
+	}
 
-    public String getDireccion() {
-        return Direccion;
-    }
 
-    public void setDireccion(String direccion) {
-        Direccion = direccion;
-    }
+	/**
+	 * @return the tamaño
+	 */
+	public String getTamaño() {
+		return Tamaño;
+	}
 
-    public String getNombre() {
-        return Nombre;
-    }
 
-    public void setNombre(String nombre) {
-        Nombre = nombre;
-    }
+	/**
+	 * @param tamaño the tamaño to set
+	 */
+	public void setTamaño(String tamaño) {
+		Tamaño = tamaño;
+	}
 
-    public String getTelefono() {
-        return Telefono;
-    }
 
-    public void setTelefono(String telefono) {
-        Telefono = telefono;
-    }
+	/**
+	 * @return the localidad
+	 */
+	public String getLocalidad() {
+		return Localidad;
+	}
 
-    public String getEmail() {
-        return Email;
-    }
 
-    public void setEmail(String email) {
-        Email = email;
-    }
+	/**
+	 * @param localidad the localidad to set
+	 */
+	public void setLocalidad(String localidad) {
+		Localidad = localidad;
+	}
 
-    public String getComentarios() {
-        return Comentarios;
-    }
 
-    public void setComentarios(String comentarios) {
-        Comentarios = comentarios;
-    }
+	/**
+	 * @return the direccion
+	 */
+	public String getDireccion() {
+		return Direccion;
+	}
 
-    public String getFecha() {
-        return fecha;
-    }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
+	/**
+	 * @param direccion the direccion to set
+	 */
+	public void setDireccion(String direccion) {
+		Direccion = direccion;
+	}
+
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return Nombre;
+	}
+
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+
+
+	/**
+	 * @return the telefono
+	 */
+	public String getTelefono() {
+		return Telefono;
+	}
+
+
+	/**
+	 * @param telefono the telefono to set
+	 */
+	public void setTelefono(String telefono) {
+		Telefono = telefono;
+	}
+
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return Email;
+	}
+
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		Email = email;
+	}
+
+
+	/**
+	 * @return the comentarios
+	 */
+	public String getComentarios() {
+		return Comentarios;
+	}
+
+
+	/**
+	 * @param comentarios the comentarios to set
+	 */
+	public void setComentarios(String comentarios) {
+		Comentarios = comentarios;
+	}
+
+
+	/**
+	 * @return the fecha
+	 */
+	public String getFecha() {
+		return fecha;
+	}
+
+
+	/**
+	 * @param fecha the fecha to set
+	 */
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+   
 }
