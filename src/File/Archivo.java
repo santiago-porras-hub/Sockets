@@ -16,19 +16,16 @@ import java.util.List;
 
 import com.opencsv.CSVWriter;
 
-public class File {
-
-	public static void main(String[] args) throws IOException {
-
-	}
+public class Archivo {
 	
-	public File() {
-		Pet pet= new Pet("asdas","asdasd","asdasd","asdas","asdas","asdas","asdasd","sadas","asdas","asdas");
+	public Archivo( )  {
+		
+		
 		
 		
 	}
 
-	private static String FILE = "CSV\\Pet.csv";
+	private static String FILE = "Pet.csv";
 
 	public ArrayList<Pet> readFile() {
 		ArrayList<Pet> list = new ArrayList<Pet>();
@@ -76,35 +73,37 @@ public class File {
 		return list;
 	}
 
-	public static  void writeFile(ArrayList<Pet> list) throws IOException{
+	public void writeFile(ArrayList<Pet> list) throws IOException{
 
       
     	FileWriter csvWriter = new FileWriter("Pet.csv");
     	
     	
     	for (Pet pet : list) {
-			
+    		
+    		csvWriter.append("\n");
     		csvWriter.append(pet.getCase());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getEspecie());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getTamaño());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getLocalidad());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getDireccion());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getNombre());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getTelefono());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getEmail());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getComentarios());
+    		csvWriter.append(",");
     		csvWriter.append(pet.getFecha());
     		
-		}
-
-        	csvWriter.append(",");
-        	csvWriter.append("Role");
-        	csvWriter.append(",");
-        	csvWriter.append("Topic");
-        	csvWriter.append("\n");
-
-        	
-
+    		
+    	}
         	csvWriter.flush();
         	csvWriter.close();
     }

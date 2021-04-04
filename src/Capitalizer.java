@@ -1,18 +1,27 @@
 
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
+
+import File.Archivo;
+import File.Pet;
 
 public class Capitalizer implements Runnable {
 
     //comunicación entre el servidor y el cliente.
     private Socket socket;
     private Socket socket2;
+    ArrayList<Pet> list = new ArrayList<>();
+    Archivo archivo= new Archivo();
 
     public Capitalizer(Socket socket, Socket socket2) {
 
+    	list= archivo.readFile();
         this.socket = socket;
         this.socket2 = socket2;
     }
@@ -45,6 +54,7 @@ public class Capitalizer implements Runnable {
                         message = in.nextLine();
                         switch (message) {
                             case "1":
+                            	
                                 out.println("Escriba la especie del animal");
                                 String species = in.nextLine();
                                 out.println("Escriba el tamaño del animal");
@@ -61,7 +71,11 @@ public class Capitalizer implements Runnable {
                                 String emailReporter = in.nextLine();
                                 out.println("escriba comentarios generales del caso de perdida");
                                 String comments = in.nextLine();
+                                Date date = new Date();
+                                String date2= String.valueOf(date);
                                 out.println("Caso de pérdida generado..... oprima enter para continuar.");
+                                list.add(new Pet("Caso Perdida",species,size,neighborhood,address,nameReporter,telephoneReporter,emailReporter,comments,date2));
+                                archivo.writeFile(list);
 //                            System.exit(0);
                                 //perdida
                                 break;
@@ -82,7 +96,11 @@ public class Capitalizer implements Runnable {
                                 String emailReporter2 = in.nextLine();
                                 out.println("escriba comentarios generales del caso de robo");
                                 String comments2 = in.nextLine();
+                                Date date1 = new Date();
+                                String date3= String.valueOf(date1);
                                 out.println("Caso de robo generado..... oprima enter para continuar.");
+                                list.add(new Pet("Caso Robo",species2,size2,neighborhood2,address2,nameReporter2,telephoneReporter2,emailReporter2,comments2,date3));
+                                archivo.writeFile(list);
 //                                System.exit(0);
                                 //Robo
                                 break;
@@ -103,7 +121,11 @@ public class Capitalizer implements Runnable {
                                 String emailReporter3 = in.nextLine();
                                 out.println("escriba comentarios generales del caso de abandono");
                                 String comments3 = in.nextLine();
+                                Date date5 = new Date();
+                                String date4= String.valueOf(date5);
                                 out.println("Caso de abandono generado..... oprima enter para continuar.");
+                                list.add(new Pet("Caso Abandono",species3,size3,neighborhood3,address3,nameReporter3,telephoneReporter3,emailReporter3,comments3,date4));
+                                archivo.writeFile(list);
 //                                System.exit(0);
                                 //Abandono
                                 break;
@@ -124,7 +146,11 @@ public class Capitalizer implements Runnable {
                                 String emailReporter4 = in.nextLine();
                                 out.println("escriba comentarios generales del caso de animal peligroso");
                                 String comments4 = in.nextLine();
+                                Date date6 = new Date();
+                                String date7= String.valueOf(date6);
                                 out.println("Caso de animal peligroso generado..... oprima enter para continuar.");
+                                list.add(new Pet("Caso Peligroso",species4,size4,neighborhood4,address4,nameReporter4,telephoneReporter4,emailReporter4,comments4,date7));
+                                archivo.writeFile(list);
 //                                System.exit(0);
                                 //Animal peligroso
                                 break;
@@ -145,8 +171,13 @@ public class Capitalizer implements Runnable {
                                 String emailReporter5 = in.nextLine();
                                 out.println("escriba comentarios generales del Manejo indebido en vía pública.");
                                 String comments5 = in.nextLine();
+                                Date date8 = new Date();
+                                String date9= String.valueOf(date8);
                                 out.println("Caso de Manejo indebido en vía pública. generado..... oprima enter para continuar.");
-//                                System.exit(0);
+                                list.add(new Pet("Caso Peligroso",species5,size5,neighborhood5,address5,nameReporter5,telephoneReporter5,emailReporter5,comments5,date9));
+                                archivo.writeFile(list);
+                                
+                                System.exit(0);
                                 //Manejo indebido en vía pública.
                                 break;
 

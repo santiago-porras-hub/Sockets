@@ -14,7 +14,23 @@ public class Pet {
     private String fecha=null;
 
 
-    public Pet(){
+    public Pet(String case1, String especie, String tamaño, String localidad, String direccion, String nombre,
+			String telefono, String email, String comentarios, String fecha) {
+		super();
+		Case = case1;
+		Especie = especie;
+		Tamaño = tamaño;
+		Localidad = localidad;
+		Direccion = direccion;
+		Nombre = nombre;
+		Telefono = telefono;
+		Email = email;
+		Comentarios = comentarios;
+		this.fecha = fecha;
+	}
+
+
+	public Pet(){
 
 
     }

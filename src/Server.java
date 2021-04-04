@@ -23,7 +23,7 @@ public class Server {
     public static void main(String[] args) throws Exception {
 
         // el número es el puerto local.
-        try (var listener = new ServerSocket(59897)) {
+        try (var listener = new ServerSocket(59899)) {
             try (var listener2 = new ServerSocket(59898)) {
 
                 System.out.println("The server is running...");
