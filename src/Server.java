@@ -34,7 +34,7 @@ public class Server {
 
                 while (true) {
                     //clase que implementa runable, para implementar un hilo en java.
-                    pool.execute(new Capitalizer(listener.accept(),listener2.accept()));
+                    pool.execute(new Bridge(listener.accept(),listener2.accept()));
                 }
             }
 

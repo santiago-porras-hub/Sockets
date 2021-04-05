@@ -1,10 +1,11 @@
 package File;
 
+//ESTA CLASE SIRVE DE APOYO PARA PODER REGISTRAR TODA LA INFORMACIÃ“N DEL CASO EN EL ARCHIVO CSV
 public class Pet {
 
     private String Case =null;
     private String Especie =null;
-    private String Tamaño = null;
+    private String Tamanio = null;
     private String Localidad =null;
     private String Direccion=null;
     private String Nombre =null;
@@ -14,12 +15,12 @@ public class Pet {
     private String fecha=null;
 
 
-    public Pet(String case1, String especie, String tamaño, String localidad, String direccion, String nombre,
+    public Pet(String case1, String especie, String tamanio, String localidad, String direccion, String nombre,
 			String telefono, String email, String comentarios, String fecha) {
 		super();
 		Case = case1;
 		Especie = especie;
-		Tamaño = tamaño;
+		Tamanio = tamanio;
 		Localidad = localidad;
 		Direccion = direccion;
 		Nombre = nombre;
@@ -69,18 +70,18 @@ public class Pet {
 
 
 	/**
-	 * @return the tamaño
+	 * @return the tamaï¿½o
 	 */
-	public String getTamaño() {
-		return Tamaño;
+	public String getTamanio() {
+		return Tamanio;
 	}
 
 
 	/**
-	 * @param tamaño the tamaño to set
+	 * @param tamaï¿½o the tamaï¿½o to set
 	 */
-	public void setTamaño(String tamaño) {
-		Tamaño = tamaño;
+	public void setTamanio(String tamanio) {
+		Tamanio = tamanio;
 	}
 
 

@@ -1,28 +1,15 @@
 package File;
 
 import java.io.BufferedReader;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-import com.opencsv.CSVWriter;
-
+//CLASE PARA LOGRAR LEER Y ESCRIBIR EN EL ARCHIVO CSV
 public class Archivo {
 	
 	public Archivo( )  {
-		
-		
-		
-		
 	}
 
 	private static String FILE = "Pet.csv";
@@ -42,7 +29,7 @@ public class Archivo {
 					try {
 						pet.setCase(row[0]);
 						pet.setEspecie(row[1]);
-						pet.setTamaño(row[2]);
+						pet.setTamanio(row[2]);
 						pet.setDireccion(row[3]);
 						pet.setLocalidad(row[4]);
 						pet.setNombre(row[5]);
@@ -86,7 +73,7 @@ public class Archivo {
     		csvWriter.append(",");
     		csvWriter.append(pet.getEspecie());
     		csvWriter.append(",");
-    		csvWriter.append(pet.getTamaño());
+    		csvWriter.append(pet.getTamanio());
     		csvWriter.append(",");
     		csvWriter.append(pet.getLocalidad());
     		csvWriter.append(",");
